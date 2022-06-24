@@ -1,0 +1,15 @@
+@import '../../../src//responsive.scss';
+
+.css-11b3ww9-MuiPaper-root-MuiAppBar-root {
+    background-color: black!important;
+    padding: 20px 0 2px;
+}
+.css-1kkpk3h-MuiButtonBase-root-MuiButton-root {
+    font-weight: 600!important;
+    font-size: 17px!important;
+    &:focus {
+        color: #bd1b93;
+        background-color: black;
+        text-decoration: underline;
+    }
+}
