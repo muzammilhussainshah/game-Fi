@@ -1,0 +1,90 @@
+@import '../../../src//responsive.scss';
+
+@font-face {
+    font-family: 'zurichregular';
+    src: url('../../../public/Fonts/ZURCH.TTF');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'zurichbold';
+    src: url('../../../public/Fonts/ZURCH.TTF');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.bg_img_contact {
+    width: 100%;
+    height: 850px;
+    object-fit: cover;
+    display: flex;
+    padding: 0 8%;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-image: url("../../../public/assets/contact_BG.png");
+    background-position: center;
+    background-size: cover;
+
+    &-Heading {
+        color: #ffff;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        font-family: zurichbold;
+        text-align: center;
+        font-size: 30px;
+
+        h1 {
+            font-size: 61px;
+
+            @include respond-to(tablet) {
+                // font-size: 47px;
+            }
+        }
+
+        p {
+            font-size: 22px;
+            font-family: zurichregular;
+            padding: 2% 17%;
+            text-align: justify;
+
+            @include respond-to(tablet-mini) {
+                margin-top: 9.5%;
+                line-height: 1.5rem;
+            }
+
+            @include respond-to(tablet) {
+                margin-top: 7.5%;
+                line-height: 1rem;
+            }
+            @include respond-to(mobile-small) {
+                margin-top: 7.5%;
+                line-height: inherit;
+                padding: 2% 0;
+                text-align: center;
+            }
+            &:last-child {
+                margin-top: 1%;
+            }
+        }
+    }
+
+    &_btn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        // margin-top: 3%;
+        width: 100%;
+
+        @include respond-to(tablet-mini) {
+            margin-top: 7%;
+        }
+
+        @include respond-to(mobile-small) {
+            flex-direction: column;
+        }
+    }
+}

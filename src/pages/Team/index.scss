@@ -1,0 +1,58 @@
+@import '../../../src//responsive.scss';
+
+.team {
+    &_container {
+        background-color: black;
+        padding: 6% 0% 2% 0;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        text-align: center;
+        @include respond-to(mobile-small) {
+            padding:  13% 4% 2% 4%;
+        }
+    }
+
+    &_div {
+        display: flex;
+        flex-direction: column;
+        padding: 0 20px 45px 20px;
+        @include respond-to(mobile-small) {
+            padding: 0 9px 45px 9px;
+            width: 50%;
+        }
+        .content {
+            display: flex;
+            flex-direction: column;
+            color: #fff;
+            align-items: flex-start;
+            margin-top: 3%;
+            .name {
+                margin-bottom: 2%;
+                @include respond-to(mobile-small) {
+                    font-size: 20px;
+                }
+                @include respond-to(mobile-s) {
+                    font-size: 18px;
+                }
+            }
+            .title {
+                font-size: 16px;
+                @include respond-to(mobile-small) {
+                    font-size: 13px;
+                }
+                @include respond-to(mobile-s) {
+                    font-size: 12px;
+                }
+            }
+        }
+    }
+
+    &_img {
+        width: 264px;
+        @include respond-to(mobile-small) {
+            width: 97%;
+        }
+    }
+
+}

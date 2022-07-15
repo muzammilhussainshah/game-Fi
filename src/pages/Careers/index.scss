@@ -1,0 +1,192 @@
+@import '../../../src//responsive.scss';
+
+@font-face {
+    font-family: 'zurichregular';
+    src: url('../../../public/Fonts/ZURCH.TTF');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'zurichbold';
+    src: url('../../../public/Fonts/ZURCH.TTF');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.bg_img_career {
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    display: flex;
+    padding: 0 8%;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-image: url("../../../public/assets/career_BG.png");
+    background-position: center;
+    background-size: cover;
+
+    &-Heading {
+        color: #ffff;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        font-family: zurichbold;
+        text-align: center;
+        font-size: 30px;
+
+        h1 {
+            font-size: 61px;
+
+            @include respond-to(tablet) {
+                // font-size: 47px;
+            }
+        }
+
+        p {
+            font-size: 22px;
+            font-family: zurichregular;
+            // margin-top: 5.5%;
+            padding: 2% 14%;
+            @include respond-to(tablet-mini) {
+                margin-top: 9.5%;
+                line-height: 1.5rem;
+            }
+
+            @include respond-to(tablet) {
+                margin-top: 7.5%;
+                line-height: 1rem;
+            }
+            @include respond-to(mobile-small) {
+                margin-top: 7.5%;
+                line-height: inherit;
+                padding: 2% 0;
+            }
+            &:last-child {
+                margin-top: 1%;
+            }
+        }
+    }
+
+    &_btn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        // margin-top: 3%;
+        width: 100%;
+
+        @include respond-to(tablet-mini) {
+            margin-top: 7%;
+        }
+
+        @include respond-to(mobile-small) {
+            flex-direction: column;
+        }
+    }
+}
+
+.home_btn {
+    background-color: #FF25C7;
+    color: #ffff;
+    border-radius: 10px;
+    font-family: zurichbold;
+    border: none;
+    margin: 2% 6%;
+    font-weight: 600;
+    padding: 7px 53px;
+    font-size: 25px;
+
+    @include respond-to(tablet) {
+        margin: 4% 6%;
+    }
+
+    @include respond-to(mobile-small) {
+        margin: 5% 0%;
+
+    }
+}
+
+.career {
+    width: 100%;
+    padding: 4% 0;
+    display: flex;
+    flex-direction: column;
+    font-family: zurichbold;
+    background-color: black;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    color: #ffff;
+    h1 {
+        color: #ffff;
+        font-family: zurichbold;
+        font-size: 65px;
+        margin-bottom: 10px;
+    }
+
+    &_div {
+
+        height: auto;
+        width: 24em;
+        text-align: center;
+        align-items: center;
+        padding: 26px 41px;
+
+        @include respond-to(tablet) {
+            padding: 26px 20px;
+            width: 20rem;
+        }
+
+        @include respond-to(tablet-mini) {
+            width: 21rem;
+            padding: 26px 30px;
+        }
+    }
+
+    &_heading {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .sideLogo {
+        width: 10%;
+        height: 8%;
+    }
+
+    // }
+    &_container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        @include respond-to(tablet) {
+            width: 92%;
+        }
+
+        @include respond-to(tablet-mini) {
+            width: 90%;
+        }
+    }
+
+    &-title {
+        font-weight: 700;
+        font-size: 32px;
+        color: #ffff;
+        text-align: start;
+        margin-top: 2px;
+        margin: 2px 0 10px;
+
+        @include respond-to(tablet) {
+            font-size: 29px;
+
+        }
+    }
+
+    &-para {
+        color: #ffff;
+        text-align: initial;
+        font-size: 18px;
+    }
+}

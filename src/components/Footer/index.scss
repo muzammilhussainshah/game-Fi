@@ -1,13 +1,180 @@
 @import '../../../src//responsive.scss';
 
+@font-face {
+    font-family: 'zurichregular';
+    src: url('../../../public/Fonts/ZURCH.TTF');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'zurichbold';
+    src: url('../../../public/Fonts/ZURCH.TTF');
+    font-weight: normal;
+    font-style: normal;
+}
+
 .main_footer {
-    background-color: #1d1d1d;
-    margin: 20% 0 0;
     width: 100%;
-    height: 60vh;
+    padding: 15px 0 5%;
+    display: flex;
+    flex-direction: column;
+    background-color: #1d1d1d;
+    width: 100%;
+    align-items: center;
+
+    @include respond-to(tablet-mini) {
+        padding: 25px 0 5%;
+    }
+
     h1 {
         color: #fff;
-        padding-top: 35px;
         text-align: center;
+        font-family: 'zurichbold';
+        font-size: 40px;
+        padding: 25px 0;
+
+        @include respond-to(tablet-mini) {
+            font-size: 35px;
+        }
+
+        @include respond-to(mobile-small) {
+            font-size: 19px;
+        }
+    }
+
+    .footer-input {
+        background-color: #1d1d1d;
+        width: 26%;
+        height: 46px;
+        padding: 0 16px;
+        font-size: 15px;
+        border: 2px solid white;
+        border-radius: 7px;
+        color: #fff;
+
+        @include respond-to(tablet) {
+            width: 28%;
+        }
+
+        @include respond-to(tablet-mini) {
+            width: 43%;
+        }
+
+        @include respond-to(mobile-small) {
+            width: 50%;
+            height: 44px;
+        }
+    }
+
+    .footer_btn {
+        background-color: #FF25C7;
+        color: #ffff;
+        border-radius: 10px;
+        font-family: zurichbold;
+        border: none;
+        margin: 1.5% 0 0;
+        font-weight: 600;
+        padding: 0.7% 9%;
+        font-size: 24px;
+    }
+}
+
+.footer {
+    background-color: black;
+    display: flex;
+    padding: 2% 3%;
+    justify-content: space-between;
+    align-items: center;
+
+    &_logo {
+        width: 62%;
+
+        @include respond-to(tablet) {
+            width: 55%;
+        }
+        @include respond-to(tablet-mini) {
+            width: 53%;
+            padding-top: 15px;
+        }
+    }
+
+    &_icons {
+        width: 29%;
+        height: fit-content;
+
+        @include respond-to(tablet-mini) {
+            width: 30%;
+            margin: 3% 0;
+        }
+    }
+
+    &_para {
+        color: #fff;
+        font-family: zurichbold;
+        text-align: end;
+        font-size: 22px;
+
+        @include respond-to(tablet) {
+            font-size: 20px;
+        }
+        @include respond-to(tablet-mini) {
+            font-size: 15px;
+        }
+    }
+
+    &_sidebar {
+        display: flex;
+        flex-direction: column;
+        width: 66%;
+    }
+}
+.footer_Mob {
+    background-color: black;
+    display: flex;
+    padding: 2% 3%;
+    justify-content: space-between;
+
+    @include respond-to(mobile-small) {
+        padding: 2% 4%;
+    }
+
+    &_logo {
+        width: 25%;
+        @include respond-to(mobile-small) {
+            width: 25%;
+            height: 79px;
+            padding-top: 18px;
+        }
+        @include respond-to(mobile-xs) {
+            width: 27%;
+        }
+    }
+
+    &_icons {
+        width: 29%;
+        height: fit-content;
+        @include respond-to(mobile-small) {
+            width: 84%;
+            margin: 2% 0 4%;
+        }
+    }
+
+    &_para {
+        color: #fff;
+        font-family: zurichbold;
+        text-align: end;
+        @include respond-to(mobile-small) {
+            font-size: 14px;
+        }
+        @include respond-to(mobile-xs) {
+            font-size: 13px;
+        }
+    }
+
+    &_sidebar {
+        display: flex;
+        flex-direction: column;
+        width: 66%;
     }
 }
