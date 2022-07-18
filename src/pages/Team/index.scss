@@ -16,7 +16,7 @@
     &_div {
         display: flex;
         flex-direction: column;
-        padding: 0 20px 45px 20px;
+        padding: 0 20px 50px 20px;
         @include respond-to(mobile-small) {
             padding: 0 9px 45px 9px;
             width: 50%;

@@ -111,9 +111,9 @@
 
     &_para {
         color: #fff;
-        font-family: zurichbold;
+        font-family: zurichregular;
         text-align: end;
-        font-size: 22px;
+        font-size: 17px;
 
         @include respond-to(tablet) {
             font-size: 20px;

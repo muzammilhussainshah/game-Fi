@@ -12,27 +12,15 @@ const Contact = () => {
                         Send us a message and lets talk.
                     </p>
                 </div>
-                {/* <div className='container-fluid bg'>
-                    <div className='form-group'>
-                        <label>Name</label>
-                        <input type="text" className='form-group' placeholder="Enter Name" />
+                <div className='contact_container'>
+                    <input type="text" className='form-group' placeholder="Your name" />
+                    <input type="email" className='form-group' placeholder="myemail@domain.com" />
+                    <input type="text" className='form-group' placeholder="Subject" />
+                    <textarea className='form-group' rows="5" placeholder="Type your message"></textarea>
+                    <div className='btn'>
+                        <button type="submit">SEND</button>
                     </div>
-                    <div className='form-group'>
-                        <label>Email</label>
-                        <input type="email" className='form-group' placeholder="Enter Email" />
-                    </div>
-                    <div className='form-group'>
-                        <label>Subject of this message</label>
-                        <input type="text" className='form-group' placeholder="Subject" />
-                    </div>
-                    <div className='form-group'>
-                        <label>Message</label>
-                        <textarea className='form-group' rows="5" placeholder="Type Message"></textarea>
-                    </div>
-                    <div className='form-group'>
-                        <button type="submit" className='btn btn-primary btn-block'>Send</button>
-                    </div >
-                </div > */}
+                </div >
             </div >
         </>
     )

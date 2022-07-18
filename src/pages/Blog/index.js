@@ -11,9 +11,7 @@ const Blog = () => {
                         Find out how GameFi connect the world through blockchain gaming
                     </p>
                 </div>
-                <div className='bg_img_btn'>
                     <img className="blog_icons" src={`/assets/blogIcon.png`} />
-                </div>
             </div>
         </>
     )
