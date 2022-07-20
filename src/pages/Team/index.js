@@ -1,21 +1,24 @@
 import './index.scss';
 import ButnField from '../../components/ButnField';
 import team from '../../mock/team';
+import Career from '../Careers';
+import { useNavigate } from "react-router-dom";
 
 const Team = () => {
-    console.log(window.location.origin)
+    const navigate = useNavigate();
+
     return (
         <>
-            <div className='bg_img'>
-                <div className="bg_img_abt-Heading">
+            <div className='bg_img_team'>
+                <div className="bg_img_team_heading">
                     <h1>OUR TEAM</h1>
                     <p>
                         We’re a multi-disciplined team of highly skilled, passionate professionals from around the world.
                         Individually we bring something unique to the team so that collectively we can inspire and innovate.
                     </p>
                 </div>
-                <div className='bg_img_btn'>
-                    <ButnField title="CAREERS" className="home_btn" />
+                <div className='bg_img_team_btn'>
+                    <ButnField title="CAREERS" className="home_btn" onClick={() => navigate("/career")}/>
                 </div>
             </div>
             <div className="team_container">

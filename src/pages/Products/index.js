@@ -1,8 +1,12 @@
 import './index.scss';
 import ButnField from '../../components/ButnField';
 import product from '../../mock/product';
+import About from '../About';
+import { useNavigate } from "react-router-dom";
 
 const Products = () => {
+    const navigate = useNavigate();
+
     return (
         <>
             <div className='bg_img_prdt'>
@@ -16,7 +20,7 @@ const Products = () => {
                     </p>
                 </div>
                 <div className='bg_img_prdt_btn'>
-                    <ButnField title="LEARN MORE" className="home_btn" />
+                    <ButnField title="LEARN MORE" className="home_btn" onClick={() => navigate("/about")}/>
                 </div>
             </div>
             <div className='prdt_vid_container'>

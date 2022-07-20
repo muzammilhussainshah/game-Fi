@@ -1,7 +1,13 @@
 import ButnField from '../../components/ButnField';
 import './index.scss';
+import About from '../About';
+import Products from '../Products';
+import News from '../News';
+import { useNavigate } from "react-router-dom";
 
 const Home = () => {
+    const navigate = useNavigate();
+
     return (
         <>
             <div className='Home'>
@@ -12,8 +18,8 @@ const Home = () => {
                         <h1 className='earn'>PLAY-to-Earn  </h1>
                     </div>
                     <div className='bg_img_btn'>
-                        <ButnField title="ABOUT US" className="home_btn" />
-                        <ButnField title="OUR PRODUCTS" className="home_btn" />
+                        <ButnField title="ABOUT US" className="home_btn" onClick={() => navigate("/about")}/>
+                        <ButnField title="OUR PRODUCTS" className="home_btn" onClick={() => navigate("/products")}/>
                     </div>
                 </div>
                 <div className='latest_detail'>
@@ -45,7 +51,7 @@ const Home = () => {
                                 <a>READ MORE</a>
                             </div>
                         </div>
-                        <ButnField title="VIEW ALL POSTS" className="post_btn" />
+                        <ButnField title="VIEW ALL POSTS" className="post_btn" onClick={() => navigate("/news")}/>
                     </div>
                     <div className='coverage'>
                         <h3 className='latest_detail_heading'>LATEST COVERAGE</h3>

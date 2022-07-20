@@ -1,8 +1,12 @@
 import './index.scss';
 import ButnField from '../../components/ButnField';
 import career from '../../mock/career';
+import Contact from '../Contact';
+import { useNavigate } from "react-router-dom";
 
 const Career = () => {
+    const navigate = useNavigate();
+
     return (
         <>
             <div className='bg_img_career'>
@@ -14,7 +18,7 @@ const Career = () => {
                     </p>
                 </div>
                 <div className='bg_img_career_btn'>
-                    <ButnField title="CONTACT US" className="home_btn" />
+                    <ButnField title="CONTACT US" className="home_btn" onClick={() => navigate("/contact")}/>
                 </div>
             </div>
             <div className='career'>

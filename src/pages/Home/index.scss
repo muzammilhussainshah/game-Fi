@@ -27,6 +27,10 @@
     background-position: center;
     background-size: cover;
 
+    @include respond-to(desktop-s) {
+        height: 100vh;
+    }
+
     @include respond-to(tablet) {
         height: 556px;
     }
@@ -40,6 +44,7 @@
         font-family: zurichbold;
         text-align: center;
         font-size: 35px;
+
         @include respond-to(tablet-mini) {
             flex-direction: column;
             display: flex;
@@ -51,6 +56,10 @@
         h1 {
             font-size: 47px;
 
+            @include respond-to(desktop-s) {
+                font-size: 85px;
+            }
+
             @include respond-to(tablet) {
                 font-size: 47px;
             }
@@ -59,10 +68,18 @@
         .p-img {
             margin-top: 3%;
             font-size: 18px;
+
+            @include respond-to(desktop-s) {
+                font-size: 43px;
+            }
         }
 
         .earn {
             margin-top: 3%;
+
+            @include respond-to(desktop-s) {
+                margin-top: 1%;
+            }
         }
     }
 
@@ -73,36 +90,55 @@
         align-items: center;
         margin-top: 3%;
         width: 100%;
+
         @include respond-to(tablet-mini) {
             margin-top: 7%;
         }
+
         @include respond-to(mobile-small) {
-            flex-direction: column;        
+            flex-direction: column;
+        }
+
+        .home_btn {
+            background-color: #FF25C7;
+            color: #ffff;
+            border-radius: 10px;
+            font-family: zurichregular;
+            border: none;
+            margin: 2% 6%;
+            font-weight: 600;
+            padding: 7px 53px;
+            font-size: 25px;
+            cursor: pointer;
+            transition: transform .5s;     /* Animation */
+
+            &:hover {
+                transform: scale(1.2);    /* (120% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+            }
+
+            @include respond-to(desktop-s) {
+                margin: 2% 4%;
+                font-size: 32px;
+                padding: 10px 90px;
+            }
+
+            @include respond-to(tablet) {
+                margin: 4% 6%;
+            }
+
+            @include respond-to(mobile-small) {
+                width: 65%;
+                padding: 7px 23px;
+            }
+
+            @include respond-to(mobile-xs) {
+                width: 65%;
+                padding: 7px 20px;
+            }
         }
     }
 
-    .home_btn {
-        background-color: #FF25C7;
-        color: #ffff;
-        border-radius: 10px;
-        font-family: zurichbold;
-        border: none;
-        margin: 2% 6%;
-        font-weight: 600;
-        padding: 7px 53px;
-        font-size: 25px;
-        @include respond-to(tablet) {
-            margin: 4% 6%;
-        }
-        @include respond-to(mobile-small) {
-            width: 65%;
-            padding: 7px 23px;
-        }
-        @include respond-to(mobile-xs) {
-            width: 65%;
-            padding: 7px 20px;
-        }
-    }
+
 }
 
 .latest_detail {
@@ -110,6 +146,10 @@
     display: flex;
     width: 100%;
     padding: 50px 75px;
+
+    @include respond-to(desktop-s) {
+        padding: 50px 95px;
+    }
 
     @include respond-to(tablet) {
         padding: 50px 35px;
@@ -119,23 +159,37 @@
         padding: 50px 75px;
         flex-direction: column;
     }
+
     @include respond-to(mobile-small) {
         padding: 50px 30px;
     }
+
     &_heading {
         color: #ffff;
         font-family: zurichbold;
         font-size: 34px;
         font-weight: 600;
         margin-bottom: 5px;
+
+        @include respond-to(desktop-s) {
+            font-size: 53px;
+        }
     }
 
     .post {
         width: 50%;
+
         @include respond-to(tablet-mini) {
             width: 100%;
         }
+
         .images {
+            cursor: pointer;
+            transition: transform .5s;     /* Animation */
+    
+            &:hover {
+                transform: scale(0.9);    /* (90% zoom out - Note: if the zoom is too large, it will go outside of the viewport) */
+            }
             @include respond-to(laptop) {
                 width: 38%;
             }
@@ -143,7 +197,7 @@
             @include respond-to(tablet-mini) {
                 width: 42%;
             }
-            
+
             @include respond-to(mobile-small) {
                 width: 100%;
             }
@@ -152,9 +206,11 @@
         &_div {
             display: flex;
             margin-top: 25px;
+
             @include respond-to(mobile-small) {
                 flex-direction: column;
             }
+
             div {
                 margin-left: 3%;
             }
@@ -165,9 +221,14 @@
                 margin-top: 0;
                 font-size: 18px;
 
+                @include respond-to(desktop-s) {
+                    font-size: 24px;
+                }
+
                 @include respond-to(tablet-mini) {
                     margin: 0 0 2%;
                 }
+
                 @include respond-to(mobile-small) {
                     margin: 7% 0 2%;
                 }
@@ -178,8 +239,10 @@
                 font-family: zurichbold;
                 line-height: 1.5rem;
 
-                @include respond-to(tablet-mini) {
-                    // width: 23rem;
+                @include respond-to(desktop-s) {
+                    font-size: 22px;
+                    line-height: 1.9rem;
+                    margin: 2% 0 3%;
                 }
             }
 
@@ -189,6 +252,10 @@
                 font-family: zurichbold;
                 font-weight: 600;
                 text-decoration: underline;
+
+                @include respond-to(desktop-s) {
+                    font-size: 25px;
+                }
             }
         }
 
@@ -202,8 +269,17 @@
             font-weight: 600;
             padding: 10px 46px;
             font-size: 22px;
-            @include respond-to(mobile-small) {
-                // margin: 5% 12%;
+            cursor: pointer;
+            transition: transform .5s;
+            /* Animation */
+
+            &:hover {
+                transform: scale(1.1);
+                /* (110% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+            }
+
+            @include respond-to(desktop-s) {
+                font-size: 35px;
             }
         }
     }
@@ -211,13 +287,16 @@
     .coverage {
         width: 50%;
         padding-left: 5%;
+
         @include respond-to(tablet-mini) {
             width: 100%;
             padding-left: 0;
         }
+
         @include respond-to(mobile-small) {
-            margin-top: 7%;        
+            margin-top: 7%;
         }
+
         &_div {
             color: #ffff;
             margin-bottom: 5%;
@@ -226,16 +305,16 @@
                 margin-bottom: 0%;
             }
 
-            @include respond-to(tablet) {
-                // width: 26rem;
-            }
-
             a {
                 color: #FF25C7;
                 cursor: pointer;
                 font-family: zurichbold;
                 font-weight: 600;
                 text-decoration: underline;
+
+                @include respond-to(desktop-s) {
+                    font-size: 25px;
+                }
             }
 
             @include respond-to(tablet) {
@@ -244,30 +323,34 @@
         }
 
         .heading {
-            font-size: 18px;
+            font-size: 22px;
             font-weight: 500;
-            // width: 28rem;
             margin: 4% 0 3%;
+
+            @include respond-to(desktop-s) {
+                font-size: 32px;
+            }
 
             @include respond-to(tablet) {
                 font-size: 16px;
             }
 
-            @include respond-to(tablet-mini) {
-                // width: 40rem;
-            }
         }
 
         .para {
             font-weight: 500;
             line-height: 1.6rem;
+            font-size: 18px;
+            margin-bottom: 1%;
 
             @include respond-to(tablet) {
                 font-size: 15px;
             }
 
-            @include respond-to(tablet-mini) {
-                // width: 38rem;
+            @include respond-to(desktop-s) {
+                font-size: 28px;
+                line-height: 2.3rem;
+                margin: 2% 0 3%;
             }
         }
 
@@ -281,13 +364,25 @@
             font-weight: 600;
             padding: 10px 46px;
             font-size: 22px;
+            cursor: pointer;
+            transition: transform .5s;
+            /* Animation */
+
+            &:hover {
+                transform: scale(1.1);
+                /* (110% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+            }
+
+            @include respond-to(desktop-s) {
+                font-size: 35px;
+            }
 
             @include respond-to(tablet) {
                 margin: 0;
             }
+
             @include respond-to(mobile-small) {
                 padding: 10px 32px;
-                // margin: 5% 9%;
             }
         }
     }

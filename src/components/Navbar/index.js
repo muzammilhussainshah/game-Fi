@@ -10,11 +10,13 @@ import Contact from '../../pages/Contact';
 import Team from '../../pages/Team';
 import Blog from '../../pages/Blog';
 import { BiPhoneCall } from "react-icons/bi";
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { RiArrowDropDownLine } from 'react-icons/ri';
 import { AiOutlineUser, AiOutlineShoppingCart } from "react-icons/ai";
 
 const Navbar = ({signOutUser}) => {
+    const { pathname } = useLocation();
+
     return (
         <>
             <div className="main-header">
@@ -24,13 +26,13 @@ const Navbar = ({signOutUser}) => {
                     </div>
                 </Link>
                 <ul className="nav-items">
-                    <li><Link to="/">HOME</Link></li>
-                    <li><Link to="/about">ABOUT</Link> </li>
-                    <li><Link to="/products">PRODUCTS</Link></li>
-                    <li><Link to="/team">TEAM</Link></li>
-                    <li><Link to="/career">CAREERS</Link></li>
-                    <li><Link to="/blog">BLOGS</Link></li>
-                    <li ><Link to="/contact">CONTACT</Link> </li>
+                    <li><Link to="/" className={pathname === '/' ? 'active' : ''}>HOME</Link></li>
+                    <li><Link to="/about" className={pathname === '/about' ? 'active' : ''}>ABOUT</Link> </li>
+                    <li><Link to="/products" className={pathname === '/products' ? 'active' : ''}>PRODUCTS</Link></li>
+                    <li><Link to="/team" className={pathname === '/team' ? 'active' : ''}>TEAM</Link></li>
+                    <li><Link to="/career" className={pathname === '/career' ? 'active' : ''}>CAREERS</Link></li>
+                    <li><Link to="/blog" className={pathname === '/blog' ? 'active' : ''}>BLOGS</Link></li>
+                    <li ><Link to="/contact" className={pathname === '/contact' ? 'active' : ''}>CONTACT</Link> </li>
                 </ul>
             </div>
 

@@ -32,16 +32,25 @@
         h1 {
             font-weight: revert;
             margin-bottom: 8%;
+
+            @include respond-to(desktop-s) {
+                font-size: 90px;
+            }
         }
         p {
             font-size: 18px;
             font-weight: 600;
+            @include respond-to(desktop-s) {
+                font-size: 30px;
+                padding: 2% 0%;
+            }
         }
     }
 }
 .blog_icons {
     width: 39%;
     margin-top: 4%;
+    cursor: pointer;
     @include respond-to(tablet-mini) {
         width: 60%;
     }

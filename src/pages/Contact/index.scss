@@ -30,6 +30,9 @@
     background-position: center;
     background-size: cover;
 
+    @include respond-to(desktop-s) {
+        height: 1000px;
+    }
     &-Heading {
         color: #ffff;
         display: flex;
@@ -42,18 +45,21 @@
 
         h1 {
             font-size: 63px;
-
-            @include respond-to(tablet) {
-                // font-size: 47px;
+            @include respond-to(desktop-s) {
+                font-size: 90px;
             }
         }
 
         p {
             font-size: 17px;
             font-family: zurichregular;
-            padding: 2% 17%;
+            padding: 2% 14%;
             text-align: center;
 
+            @include respond-to(desktop-s) {
+                font-size: 30px;
+                padding: 2% 14%;
+            }
             @include respond-to(tablet-mini) {
                 margin-top: 9.5%;
                 line-height: 1.5rem;
@@ -76,22 +82,6 @@
             }
         }
     }
-
-    &_btn {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        // margin-top: 3%;
-        width: 100%;
-
-        @include respond-to(tablet-mini) {
-            margin-top: 7%;
-        }
-
-        @include respond-to(mobile-small) {
-            flex-direction: column;
-        }
-    }
 }
 
 .contact_container {
@@ -107,13 +97,25 @@
         border: 2px solid white;
         border-radius: 5px;
         padding: 0 10px;
+        
+        @include respond-to(desktop-s) {
+            width: 465px;
+            height: 90px;
+        }
         @include respond-to(mobile-xs) {
             width: 240px;        
         }
     }
+    input, select, textarea{
+        color: #ffff;
+        font-size: 17px;
+    }
     ::placeholder {
         color: #ffff;
         font-size: 14px;
+        @include respond-to(desktop-s) {
+            font-size: 23px;
+        }
     }
     textarea {
         background: rgba(0, 0, 0, 0.6 );
@@ -123,6 +125,10 @@
         border: 2px solid white;
         border-radius: 5px; 
         padding: 5px 10px;
+
+        @include respond-to(desktop-s) {
+            width: 465px;
+        }
         @include respond-to(mobile-xs) {
             width: 240px;        
         }
@@ -137,9 +143,18 @@
             border: #bd1b93;
             font-weight: 800;
             font-size: 21px;
-            width: 149px;
             border-radius: 6px;
-            padding: 2%;
+            padding: 2% 11%;
+            cursor: pointer;
+            transition: transform .5s; /* Animation */
+
+            &:hover {
+                transform: scale(1.1); /* (110% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+            }
+            @include respond-to(desktop-s) {
+                padding: 2% 13%;
+                font-size: 28px;
+            }
         }
     }
 

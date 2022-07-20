@@ -1,5 +1,6 @@
 import ButnField from '../../components/ButnField';
 import './index.scss';
+import { Link } from 'react-router-dom';
 
 const News = () => {
     return (
@@ -32,7 +33,7 @@ const News = () => {
                     with them on setting the first example of how entertainment can be leveraged with NFTs and play-and-earn
                     to engage and reward both local visitors and those from around the globe.” Further details about the
                     collaboration will be announced in due course. (eap)</p>
-                <a>BACK</a>
+                    <Link className='link' to="/">BACK</Link>
             </div>
         </>
     )

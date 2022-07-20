@@ -1,5 +1,6 @@
 import ButnField from '../ButnField';
 import './index.scss';
+import { Link, useNavigate } from 'react-router-dom';
 
 const ScreenFooter = () => {
     return (
@@ -11,7 +12,7 @@ const ScreenFooter = () => {
             </div>
             <div className="footer">
                 <div>
-                    <img className='footer_logo' src={`/assets/logo.png`} />
+                    <Link to="/"><img className='footer_logo' src={`/assets/logo.png`} /></Link>
                 </div>
                 <img className='footer_icons' src={`/assets/socialIcons.png`} />
                 <div></div>

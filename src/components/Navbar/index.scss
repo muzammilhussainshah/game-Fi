@@ -11,18 +11,17 @@
   display: flex;
   justify-content: space-between;
   width: 100%;
-  padding: 22px 27px 2px;
+  padding: 22px 35px 2px;
   position: sticky;
   top: 0;
   background-color: black;
   z-index: 100;
 
-  @include respond-to(tablet) {
-    // padding: 22px 75px 5px 75px;
+  @include respond-to(desktop-s) {
+    padding: 22px 40px 7px;
   }
 
   @include respond-to(tablet-mini) {
-    // padding: 15px 18px 7px;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -50,10 +49,13 @@
 }
 
 .header_logo {
+  margin-bottom: 2%;
   @include respond-to(laptop) {
     width: 60%;
   }
-
+  @include respond-to(desktop-small) {
+    width: 60%;
+  }
   @include respond-to(tablet) {
     width: 44%;
   }
@@ -68,11 +70,17 @@
   display: flex;
   justify-content: center;
   list-style-type: none;
-  font-size: 19px;
-  font-family: zurichregular !important;
-  padding: 19px 0 0;
+  font-size: 21px;
+  font-family: zurichbold !important;
+  padding: 24px 0 0;
   margin: 4px;
   color: #fff;
+
+  @include respond-to(desktop-s) {
+    font-size: 31px;
+    font-weight: 600;
+    padding: 2.5% 0 0;
+  }
 
   @include respond-to(tablet) {
     padding: 7px 0 10px;
@@ -82,7 +90,7 @@
 
   @include respond-to(tablet-mini) {
     padding: 7px 0 10px;
-    font-size: 16px;
+    font-size: 19px;
   }
 
   @include respond-to(mobile-small) {
@@ -97,6 +105,10 @@
 .nav-items li {
   padding-left: 25px !important;
 
+  @include respond-to(desktop-s) {
+    padding-left: 30px !important;
+  }
+
   @include respond-to(mobile-small) {
     padding-left: 9px !important;
   }
@@ -107,6 +119,10 @@
 
   &:first-child {
     padding-left: 0 !important;
+  }
+  .active {
+    color: #bd1b93 !important;
+    text-decoration: underline;
   }
 }
 
@@ -119,6 +135,9 @@
     color: #bd1b93 !important;
     background-color: black;
     text-decoration: underline;
+  }
+  &:hover {
+    color: #bd1b93 !important;
   }
 }
 

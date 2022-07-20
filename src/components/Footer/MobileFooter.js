@@ -1,5 +1,6 @@
 import ButnField from '../ButnField';
 import './index.scss';
+import { Link } from 'react-router-dom';
 
 const MobileFooter = () => {
     return (
@@ -10,7 +11,8 @@ const MobileFooter = () => {
                 <ButnField title="SUBSCRIBE" className="footer_btn" />
             </div>
             <div className="footer_Mob">
-                <img className='footer_Mob_logo' src={`/assets/logo.png`} />
+            <Link to="/">
+                <img className='footer_Mob_logo' src={`/assets/logo.png`} /></Link>
                 <div className='footer_sidebar'>
                     <img className='footer_Mob_icons' src={`/assets/socialIcons.png`} />
                     <p className="footer_Mob_para">Copyright ©2022 HK Gamefi Association, Inc.</p>

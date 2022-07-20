@@ -124,6 +124,9 @@
     h2 {
         font-size: 31px;
         text-align: initial;
+        @include respond-to(desktop-s) {
+            font-size: 47px;
+        }
         @include respond-to(mobile-small) {
             font-size: 21px;
         }
@@ -131,13 +134,26 @@
     p {
         font-size: 20px;
         margin: 1% 0;
+        @include respond-to(desktop-s) {
+            font-size: 28px;
+        }
+        @include respond-to(desktop-s) {
+            font-size: 28px;
+        }
+        @include respond-to(mobile) {
+            padding: 2% 0;
+        }
     }
-    a {
+    .link {
         color: #FF25C7;
         cursor: pointer;
         font-family: zurichbold;
         font-weight: 600;
         text-decoration: underline;
         text-align: center!important;
+        font-size: 22px;
+        @include respond-to(desktop-s) {
+            font-size: 35px;
+        }
     }
 }

@@ -39,9 +39,8 @@
 
         h1 {
             font-size: 61px;
-
-            @include respond-to(tablet) {
-                // font-size: 47px;
+            @include respond-to(desktop-s) {
+                font-size: 90px;
             }
         }
 
@@ -49,6 +48,10 @@
             font-size: 22px;
             font-family: zurichregular;
             padding: 2% 17%;
+            @include respond-to(desktop-s) {
+                font-size: 30px;
+                padding: 2% 21%;
+            }
             @include respond-to(tablet-mini) {
                 margin-top: 9.5%;
                 padding: 2% 0%;
@@ -75,7 +78,6 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        // margin-top: 3%;
         width: 100%;
 
         @include respond-to(tablet-mini) {
@@ -85,29 +87,41 @@
         @include respond-to(mobile-small) {
             flex-direction: column;
         }
+        .home_btn {
+            background-color: #FF25C7;
+            color: #ffff;
+            border-radius: 10px;
+            font-family: zurichbold;
+            border: none;
+            margin: 2% 6%;
+            font-weight: 600;
+            padding: 7px 53px;
+            font-size: 25px;
+            cursor: pointer;
+            transition: transform .5s; /* Animation */
+
+            &:hover {
+                transform: scale(1.1); /* (110% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+            }
+            
+            @include respond-to(desktop-s) {
+                margin: 2% 4%!important;
+                font-size: 32px!important;
+                padding: 10px 90px!important;
+            }
+            @include respond-to(tablet) {
+                margin: 4% 6%;
+            }
+        
+            @include respond-to(mobile-small) {
+                margin: 5% 0%;
+        
+            }
+        }
     }
 }
 
-.home_btn {
-    background-color: #FF25C7;
-    color: #ffff;
-    border-radius: 10px;
-    font-family: zurichbold;
-    border: none;
-    margin: 2% 6%;
-    font-weight: 600;
-    padding: 7px 53px;
-    font-size: 25px;
 
-    @include respond-to(tablet) {
-        margin: 4% 6%;
-    }
-
-    @include respond-to(mobile-small) {
-        margin: 5% 0%;
-
-    }
-}
 
 .mission {
     width: 100%;
@@ -132,6 +146,11 @@
         font-size: 65px;
         margin-bottom: 10px;
 
+        @include respond-to(desktop-s) {
+            font-size: 80px;
+            margin-bottom: 2%;
+        }
+
         @include respond-to(tablet-mini) {
             font-size: 60px;
         }
@@ -145,6 +164,9 @@
         font-family: zurichregular;
         text-align: center;
         font-size: 18px;
+        @include respond-to(desktop-s) {
+            font-size: 30px;
+        }
     }
 }
 
@@ -168,6 +190,10 @@
         font-size: 65px;
         margin-bottom: 10px;
 
+        @include respond-to(desktop-s) {
+            font-size: 80px;
+            margin-bottom: 2%;
+        }
         @include respond-to(tablet-mini) {
             font-size: 60px;
         }
@@ -181,11 +207,19 @@
         font-family: zurichbold;
         text-align: center;
         font-size: 18px;
-
+        @include respond-to(desktop-s) {
+            font-size: 30px;
+        }
         @include respond-to(tablet-mini) {
             width: 76%;
         }
     }
+}
+.body {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .values {
@@ -200,6 +234,9 @@
     justify-content: center;
     color: #ffff;
 
+    @include respond-to(desktop-s) {
+        padding: 4% 1%;
+    }
     @include respond-to(tablet-mini) {
         padding: 4% 0;
     }
@@ -209,7 +246,10 @@
         font-family: zurichbold;
         font-size: 65px;
         margin-bottom: 10px;
-
+        @include respond-to(desktop-s) {
+            font-size: 80px;
+            margin-bottom: 2%;
+        }
         @include respond-to(tablet-mini) {
             font-size: 60px;
         }
@@ -220,11 +260,14 @@
 
     &_div {
         height: auto;
-        width: 24em;
+        width: 24rem;
         text-align: center;
         align-items: center;
         padding: 26px 41px;
 
+        @include respond-to(desktop-s) {
+            width: 35rem;
+        }
         @include respond-to(tablet) {
             padding: 26px 20px;
             width: 20rem;
@@ -245,16 +288,17 @@
         width: 9%;
         height: 8%;
 
+        @include respond-to(desktop-s) {
+            width: 11%;
+        }
         @include respond-to(tablet) {
             width: 8%;
         }
     }
 
-    // }
     &_container {
         display: flex;
         flex-wrap: wrap;
-        // width: 86%;
         justify-content: center;
         align-items: center;
 
@@ -275,6 +319,10 @@
         margin-top: 2px;
         margin: 2px 0 0;
 
+        @include respond-to(desktop-s) {
+            font-size: 48px;
+
+        }
         @include respond-to(tablet) {
             font-size: 29px;
 
@@ -286,12 +334,10 @@
         text-align: initial;
         font-size: 18px;
         margin-top: 4%;
+        @include respond-to(desktop-s) {
+            font-size: 29px;
+
+        }
     }
 }
 
-.body {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
