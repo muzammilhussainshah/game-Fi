@@ -14,8 +14,7 @@ const Home = () => {
                 <div className='bg_img'>
                     <div className="bg_img_heading">
                         <h1>WE CREATE  BLOCKCHAIN GAMES </h1>
-                        <h6 className="p-img" >NFT <span> &</span> GameFi</h6>
-                        <h1 className='earn'>PLAY-to-Earn  </h1>
+                        <img className='heading_img' src={`/assets/Picture1.png`}/>
                     </div>
                     <div className='bg_img_btn'>
                         <ButnField title="ABOUT US" className="home_btn" onClick={() => navigate("/about")}/>

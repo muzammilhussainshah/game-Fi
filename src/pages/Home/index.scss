@@ -9,7 +9,14 @@
 
 @font-face {
     font-family: 'zurichbold';
-    src: url('../../../public/Fonts/ZURCH.TTF');
+    src: url('../../../public/Fonts/ZURCHBC.TTF');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'zurichbold_italic';
+    src: url('../../../public/Fonts/ZURCHBCI.TTF');
     font-weight: normal;
     font-style: normal;
 }
@@ -54,31 +61,48 @@
         }
 
         h1 {
-            font-size: 47px;
-
+            // font-size: 47px;
+            font-family: zurichbold;
+            @include respond-to(laptop) {
+                font-size: 72px;
+            }
+            @include respond-to(desktop) {
+                font-size: 75px;
+            }
             @include respond-to(desktop-s) {
-                font-size: 85px;
+                font-size: 100px;
             }
 
             @include respond-to(tablet) {
+                font-size: 57px;
+            }
+            @include respond-to(tablet-mini) {
                 font-size: 47px;
             }
-        }
-
-        .p-img {
-            margin-top: 3%;
-            font-size: 18px;
-
-            @include respond-to(desktop-s) {
-                font-size: 43px;
+            @include respond-to(mobile) {
+                font-size: 44px;
+                margin-bottom: 2%;
             }
         }
-
-        .earn {
-            margin-top: 3%;
-
+        .heading_img {
+            width: 90%;
+            @include respond-to(laptop) {
+                width: 63%;
+            }
+            @include respond-to(desktop) {
+                width: 72%;
+            }
             @include respond-to(desktop-s) {
-                margin-top: 1%;
+                width: 74%;            
+            }
+            @include respond-to(tablet) {
+                width: 77%;
+            }
+            @include respond-to(mobile-small) {
+                width: 100%;            
+            }
+            @include respond-to(mobile) {
+                width: 104%;            
             }
         }
     }
@@ -238,7 +262,8 @@
                 color: #ffff;
                 font-family: zurichbold;
                 line-height: 1.5rem;
-
+                margin-top: 3%;
+                font-family: zurichregular;
                 @include respond-to(desktop-s) {
                     font-size: 22px;
                     line-height: 1.9rem;
@@ -325,7 +350,7 @@
         .heading {
             font-size: 22px;
             font-weight: 500;
-            margin: 4% 0 3%;
+            margin: 4% 0 2%;
 
             @include respond-to(desktop-s) {
                 font-size: 32px;
@@ -342,7 +367,7 @@
             line-height: 1.6rem;
             font-size: 18px;
             margin-bottom: 1%;
-
+            font-family: zurichregular;
             @include respond-to(tablet) {
                 font-size: 15px;
             }
