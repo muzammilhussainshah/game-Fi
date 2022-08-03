@@ -20,30 +20,33 @@ const Products = () => {
                     </p>
                 </div>
                 <div className='bg_img_prdt_btn'>
-                    <ButnField title="LEARN MORE" className="home_btn" onClick={() => navigate("/about")}/>
+                    <ButnField title="LEARN MORE" className="home_btn" onClick={() => navigate("/about")} />
                 </div>
             </div>
-            <div className='prdt_vid_container'>
-                <div className='vid'>
-                    <img src={`/assets/prdt_vid.png`} />
+            <div className='prdt_main'>
+                <div className='prdt_main_container'>
+                    <div className='vid'>
+                    <iframe  src="https://www.youtube.com/embed/B4neO5B2mGM" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>
+                    </div>
                 </div>
+
                 <div>
                     <img className='prdt_sidebar' src={`/assets/prdt_slider.png`} />
                 </div>
                 <div className="product_container">
-                {
-                    product.map((item) => (
+                    {
+                        product.map((item) => (
 
-                        <div key={item.id} className="product_div">
-                            {/* {<div > */}
-                               { <img className="product_img" src={`${window.location.origin}/${item.image}`} />}
-                            {/* </div>} */}
-                            <div className='content'>
-                                <h1 className="name">{item.name}</h1>
-                            </div>
-                        </div>)
-                    )}
-            </div>
+                            <div key={item.id} className="product_div">
+                                {/* {<div > */}
+                                {<img className="product_img" src={`${window.location.origin}/${item.image}`} />}
+                                {/* </div>} */}
+                                <div className='content'>
+                                    <h1 className="name">{item.name}</h1>
+                                </div>
+                            </div>)
+                        )}
+                </div>
             </div>
         </>
     )
